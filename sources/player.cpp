@@ -13,7 +13,7 @@ Player ::Player(string name)
 // Returns the number of cards left in the Player's stack.
 int Player ::stacksize()
 {
-    if(!this->isPlaying)
+    if(!(this->isPlaying))
     {
         return 0;
     }
@@ -21,7 +21,7 @@ int Player ::stacksize()
     {
         return (CARDS_FOR_PLAYER - this->index);
     }
-    return -1;
+    return 0;
 }
 
 bool Player :: getIsPlaying()

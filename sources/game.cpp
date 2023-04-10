@@ -23,7 +23,7 @@ Game ::Game(Player &p1, Player &p2)
             throw std::runtime_error("Player is already playing");
         }
         p1.setIsPlayint(true);
-        p1.setIsPlayint(true);
+        p2.setIsPlayint(true);
     }
     catch (const std::exception &e)
     {
@@ -90,7 +90,7 @@ void Game ::tempPlayTurn(int index, int ifPrint)
             if (this->isOver)
             {
                 p1.setIsPlayint(false);
-                p1.setIsPlayint(false);
+                p2.setIsPlayint(false);
             }
         }
 
