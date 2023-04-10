@@ -16,11 +16,12 @@ Game ::Game(Player &p1, Player &p2)
     this->amountOfDraw = 0;
     this->amountOfTrun = 0;
 
+    
     try
     {
         if (p1.getIsPlaying() || p2.getIsPlaying())
         {
-            throw std::runtime_error("Player is already playing");
+            throw runtime_error("Player is already playing");
         }
         p1.setIsPlayint(true);
         p2.setIsPlayint(true);
@@ -53,6 +54,13 @@ Game ::Game(Player &p1, Player &p2)
 // Returns 0 if the turn was successful
 int Game ::playTurn()
 {
+    if (this->isOver)
+    {
+        throw runtime_error("Game is already over");
+    }
+    if (&p1 == &p2) {
+        throw std::invalid_argument("Both players cannot be the same.");
+    }
     if (this->isOver || p1.getIndex() != p2.getIndex() || !(p1.isIndexValid(p1.getIndex()) && p2.isIndexValid(p2.getIndex())))
     {
         this->isOver = true;

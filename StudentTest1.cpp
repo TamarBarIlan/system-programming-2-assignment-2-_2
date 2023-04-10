@@ -54,7 +54,7 @@ TEST_CASE("Throwing errors from the functions")
     CHECK_NOTHROW(game.printWiner());
 }
 
-TEST_CASE("Activating another turn after the game is over")
+TEST_CASE("Activating another turn after the game is over") //
 {
     Player p1("Alice");
     Player p2("Bob");
@@ -65,7 +65,7 @@ TEST_CASE("Activating another turn after the game is over")
     CHECK_THROWS(game.playTurn());
 }
 
-TEST_CASE("One player")
+TEST_CASE("One player") //
 {
     Player p1("Alice");
     Game game(p1, p1);
