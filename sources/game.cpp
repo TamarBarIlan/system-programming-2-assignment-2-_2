@@ -58,9 +58,7 @@ int Game ::playTurn()
     {
         throw runtime_error("Game is already over");
     }
-    if (&p1 == &p2) {
-        throw std::invalid_argument("Both players cannot be the same.");
-    }
+    
     if (this->isOver || p1.getIndex() != p2.getIndex() || !(p1.isIndexValid(p1.getIndex()) && p2.isIndexValid(p2.getIndex())))
     {
         this->isOver = true;

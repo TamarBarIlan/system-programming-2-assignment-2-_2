@@ -26,7 +26,7 @@ private:
     vector<Card> p2DrawCard;
 
 public:
-    Game(Player& p1, Player& p2);
+    Game(Player& player1, Player& player2);
     int playTurn();  
     void printLastTurn();
     void playAll();
