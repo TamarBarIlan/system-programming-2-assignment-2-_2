@@ -36,18 +36,6 @@ Game ::Game(Player &p1, Player &p2)
     shuffle(deck);
     deal_cards(deck, p1.getCards(), p2.getCards(), 26);
 
-    // cout << "p1: " << endl;
-    // for (int i = 0; i < 26; i++)
-    // {
-    //     size_t inx = static_cast<size_t>(i);
-    //     cout << "p1 rank = " << p1.getCards().at(inx).rank << " p1 suit = " << p1.getCards().at(inx).suit << endl;
-    // }
-    // cout << "p2: " << endl;
-    // for (int i = 0; i < 26; i++)
-    // {
-    //     size_t inx = static_cast<size_t>(i);
-    //     cout << "p2 rank = " << p2.getCards().at(inx).rank << " p2 suit = " << p2.getCards().at(inx).suit << endl;
-    // }
 }
 
 // Returns -1 if the indexes are invalid or the game is already over
